@@ -1,4 +1,11 @@
 /**
+ *  NAME: Anthony Norderhaug
+ *  DATE: 10/1/2020                        (might be off for older commits as I'm adding this past committing)
+ *  COLLEGE: San Diego State University
+ *  GITHUB: https://github.com/anorderh
+ *
+ *       LEETCODE PROMPT
+ *  --------------------------
  * Given an array nums, write a function to move all 0's to the end of it while maintaining
  * the relative order of the non-zero elements.
  *
