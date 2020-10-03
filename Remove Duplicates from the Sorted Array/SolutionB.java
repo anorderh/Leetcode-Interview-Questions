@@ -29,25 +29,24 @@
  */
 
 public class SolutionB {
+
+    // optimization revolved around pointer integer "length" also serving as new subArray's length
+
     public int removeDuplicates(int[] nums) {
-        int length = nums.length;
+        int length = 1;
+        // since every array has atleast 1 element, there is atleast 1 unique value in every array, starting length at 0
 
-        for (int i = 0; i < length; i++) {
-            int j = i+1;
-
-            while (j < length) {
-                if (nums[i] == nums[j]) {
-                    for (int k = j; k < length - 1; k++) {
-                        nums[k] = nums[k+1];
-                    }
-
-                    length--;
-                } else {
-                    j++;
-                }
+        // EXAMPLE: [0,0, 1, 1, 1,1,1,1,2,2,3,3,4],
+            // Since prompt establishes operating arrays are already sorted, all duplicates will be side-by-side. Therefore,
+            // relative operators on elements next to each other are applicable in deciding if dupes are present or not
+        for (int i = 0; i < nums.length-1; i++) {
+            if (nums[i] != nums[i+1]) {
+                nums[length] = nums[i+1];
+                length++;
             }
         }
 
         return length;
+
     }
 }
